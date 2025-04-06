@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Shop ABC</title>
+    <link rel="stylesheet" href="CSS/site.CSS" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="myrow">
+            <div class="cottrai">
+
+                <asp:ListBox ID="ListBox1" runat="server" DataSourceID="SqlDataSource1" DataTextField="TenNhom" DataValueField="IdNhom" Width="90%" AutoPostBack="True" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged">
+                    <asp:ListItem></asp:ListItem>
+                </asp:ListBox>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [NhomSP]"></asp:SqlDataSource>
+
+            </div>
+            <div class="cotgiua">
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                 </asp:ContentPlaceHolder>
+            </div>
+            <div class="cotphai">
+
+                <table style="width:100%;">
+                    <tr>
+                        <td>Tai khoan</td>
+                        <td>
+                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Mat khau</td>
+                        <td>
+                            <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="BtnDangNhap" runat="server" Text="Dang Nhap" OnClick="BtnDangNhap_Click" />
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <div>
+          
+        </div>
+    </form>
+</body>
+</html>

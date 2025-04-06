@@ -1,0 +1,22 @@
+﻿body {
+}
+.myrow{
+    display:flex;
+    flex-wrap:wrap;
+}
+.cottrai{
+    flex: 0 0 auto;
+    width: 25%;
+}
+.cotgiua {
+    flex: 0 0 auto;
+    width: 50%;
+}
+.cotphai {
+    flex: 0 0 auto;
+    width: 25%;
+}
+.mycol-12 {
+    flex: 0 0 auto;
+    width: 90%
+}
